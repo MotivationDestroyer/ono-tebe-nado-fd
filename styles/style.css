@@ -1,1 +1,263 @@
 /* место для вашего кода */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex: 1;
+}
+.header {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  align-items: center;
+  padding: 92px 50px 96px 50px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+}
+.header__logo {
+  width: 148px;
+}
+.header__logo-image {
+  display: block;
+  height: 105px;
+}
+.header__links-list {
+  display: flex;
+  gap: 33px;
+}
+.header__links-list-item {
+  list-style-type: circle;
+}
+.header__links-list-item_no-bullit {
+  list-style-type: none;
+}
+.header__links-list-item_no-bullit a,
+.footer__links-list-item_no-bullit a {
+  text-decoration: none;
+}
+.header__contacts-phone,
+.header__contacts-mail,
+.footer__contacts-phone,
+.footer__contacts-mail,
+.footer__links-list-item a,
+.header__links-list li a {
+  text-underline-offset: 4px;
+  white-space: nowrap;
+}
+.header__contacts-address {
+  justify-self: end;
+  max-width: 240px;
+  font-style: normal;
+  line-height: 24px;
+}
+
+.cover {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  background: url("../images/cover.jpg") no-repeat center / cover;
+}
+.cover__overlay,
+.lots__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.cover__title {
+  width: 100%;
+  padding: 165px 50px 106px 50px;
+}
+.aligned-text {
+  position: relative;
+  z-index: 1;
+  display: block;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 1.15;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+.aligned-text_left {
+  text-align: left;
+}
+.aligned-text_center {
+  padding-left: 30px;
+  text-align: center;
+}
+.aligned-text_right {
+  margin-right: -30px;
+  text-align: right;
+}
+.aligned-text_center,
+.aligned-text_right {
+  padding-top: 20px;
+}
+.cover__description {
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px 50px 50px;
+}
+.cover__description-text {
+  display: block;
+  align-self: center;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 28px;
+  text-transform: uppercase;
+  word-spacing: 19px;
+}
+.bet-button {
+  border: 1px solid #fff;
+  padding: 12px 32px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1;
+  background: transparent;
+}
+.lots {
+  display: flex;
+  flex-direction: column;
+  margin: 189px 24px 120px 24px;
+}
+.lots__heading {
+  margin-bottom: 27px;
+  margin-left: 40px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.lots__card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+.lots__card-list-item {
+  width: 334px;
+  min-height: 596px;
+  list-style-type: none;
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 48px 40px;
+}
+.card-link {
+  display: block;
+  text-decoration: none;
+}
+.card,
+.card-link {
+  height: 100%;
+}
+.card__title {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.2;
+  text-decoration: underline solid;
+  text-decoration-skip-ink: none; /* не дает убрать подчеркивание под буквой Д. Совместимость под вопросом */
+  text-transform: uppercase;
+}
+.card__text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+}
+.card__title,
+.card__text {
+  z-index: 1;
+  color: #fff;
+}
+.card_type_film {
+  background: url("../images/card-lot-01.jpg") no-repeat center / cover;
+}
+.card_type_book {
+  background: url("../images/card-lot-02.jpg") no-repeat center / cover;
+}
+.card_type_picture {
+  background: url("../images/card-lot-03.jpg") no-repeat center / cover;
+}
+.lots__look-more-link {
+  margin-top: 33px;
+  margin-left: 40px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1;
+  text-decoration: underline 1px solid #000;
+  text-underline-offset: 4px;
+}
+.about {
+  display: grid;
+  grid-template-columns: 334px 1fr;
+  align-items: start;
+  gap: 25px;
+  margin: 24px 24px 180px;
+}
+.about__column {
+  margin-top: 137px;
+}
+.about__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 240px;
+  margin-top: 35px;
+  margin-left: 47px;
+  border-radius: 50%;
+  background-color: #000;
+}
+.about__logo-image {
+  width: 148px;
+}
+.about__title {
+  margin-bottom: 100px;
+  font-weight: 700;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px 82px 50px;
+  font-weight: 400;
+  font-size: 18px;
+}
+.footer__contacts-address {
+  display: flex;
+  flex-direction: column;
+  max-width: 242px;
+  font-style: normal;
+  font-style: normal;
+  line-height: 24px;
+}
+.footer__social-list-item {
+  width: 48px;
+  height: 48px;
+}
+.footer__social-list {
+  display: flex;
+  gap: 48px;
+}
+.footer__links-list {
+  text-align: center;
+}
+.footer__links-list-item,
+.footer__social-list-item {
+  list-style: none;
+}
